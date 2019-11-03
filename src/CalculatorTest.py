@@ -9,15 +9,17 @@ class MyTestCase(unittest.TestCase):
 
     def test_results_property_calculator(self):
         calculator = Calculator()
-        self.assertEquals(calculator.result, 4)
+        self.assertEquals(calculator.result, 0)
 
     def test_addition(self):
         calculator = Calculator()
-        self.assertEqual(calculator.add(1, 1), 2)
+        self.assertEqual(calculator.add(2, 2), 4)
+        self.assertEqual(calculator.result, 4)
 
     def test_subtraction(self):
         calculator = Calculator()
-        self.assertEqual(calculator.subtract(1, 1), 0)
+        self.assertEqual(calculator.subtract(2, 2), 0)
+        self.assertEqual(calculator.result, 0)
 
     def test_results_property(self):
         calculator = Calculator()
