@@ -57,8 +57,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.squareroot.result, result)
 
     def test_results_property(self):
-
-        calculator.add(2, 1)
+        self.calculator.add(2, 1)
         self.assertEqual(self.calculator.result, 3)
 
 
