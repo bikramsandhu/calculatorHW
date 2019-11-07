@@ -1,26 +1,13 @@
 import math
-
-def addition(a,b):
-    return a + b
-
-def subtraction(a,b):
-    return a - b
-
-def multiplication(a,b):
-    return a * b
-
-def division(a,b):
-    return a / b
-
-def squarenum(a):
-    return a^2
-
-def squarerootnum(a):
-    return math.sqrt(a)
+from Calculator.Addition import addition
+from Calculator.Subtraction import subtraction
+from Calculator.Multiplication import multiplication
+from Calculator.Division import division
+from Calculator.Square import square
+from Calculator.SquareRoot import squareroot
 
 class Calculator:
     result = 0
-
     def _init_(self):
         pass
 
@@ -41,9 +28,9 @@ class Calculator:
         return self.result
 
     def square(self, a):
-        self.result = squarenum(a)
+        self.result = square(a)
         return self.result
 
     def squareroot(self, a):
-        self.result = squarerootnum(a)
+        self.result = squareroot(a)
         return self.result
